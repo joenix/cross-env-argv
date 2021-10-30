@@ -8,13 +8,13 @@ module.exports = (
 
 		context.replace(
 
-			/^([\w\.\-\:\/]+)\=?(.*)/g,
+			/^\-{2}?([\w\.\-\:\/]+)\=?(.*)/g,
 
-			( word, $1, $2 ) => {
+			( $0, $1, $2 ) => {
 
 				item[ $1 ] = $2 || true;
 
-				return word;
+				return $0;
 
 			}
 
